@@ -1,0 +1,29 @@
+{
+  "name": "25Oracle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "fullcalendar": "^5.3.2",
+    "graceful-fs": "^4.2.3",
+    "gulp-update": "0.0.2",
+    "jquery": "^3.5.1",
+    "natives": "^1.1.6",
+    "popper.js": "^1.16.0",
+    "tether": "^1.4.7",
+    "vinyl-fs": "^3.0.3"
+  }
+}
