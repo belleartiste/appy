@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Appy Health</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel='stylesheet' href="/css/font-awesome.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/styles.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+        <!--chart.js-->
+        <script src="/scripts/Chart.bundle.js"></script>
+        <script src="/scripts/Chart.bundle.min.js"></script>
+        <script src="/scripts/Chart.js"></script>
+        <script src="/scripts/Chart.min.js"></script>
+
+    </head>
+
+    <body>
+                <!--Top Nav-->
+                <nav class="navbar navbar-expand-lg navbar-darkblack bg-darkblack text-white">
+                  <a class="navbar-brand" href="#"><img src="/images/AppyLogo-DarkBkgd.png" height="42" class="d-inline-block align-top ml-5 mr-4 pl-5 pr-4" alt="Appy Health Logo"></a></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link text-white pr-4" href="#"> <span class="sr-only">(current)</span></a>
+                      </li>
+                      
+                      <li class="nav-item dropdown">
+                        <a class="nav-link text-white pr-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white pr-4" href="#"></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white pr-4" href="#"></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#"></a>
+                      </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                      <a class="nav-link text-white" href="#"><img src="images/search-white-icon.png" width="28" height="28" class="blue-server d-inline-block ml-4 mr-1 align-top" alt=""></a>
+                      <a class="nav-link text-white" href="#"><img src="images/profile-white-icon.png" width="28" height="28" class="blue-server d-inline-block ml-1 mr-1 align-top" alt=""></a>
+                      <a class="nav-link text-white" href="#"><img src="images/notifications.png" width="28" height="28" class="blue-server d-inline-block ml-1 mr-4 align-top" alt=""></a>
+                    </form>
+                  </div>
+                </nav>  
+                
+                <!--Left Filter Nav-->
+
+                  <main class="container-fluid" role="main">
+
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-2 col-lg-1 d-inline-block pt-0 align-top bg-light sidebar2" >
+                        
+
+                          <a href="dash.html"><img src="images/dashboard.png" class="d-inline-block align-top pt-2 pb-2" alt="Dashboard"> </a>
+                          <a class="active" href="#appts"><img src="images/appt.png" class="d-inline-block align-top pt-2 pb-2 alt="Appointments"> </a>
+                          <a href="#patients"><img src="images/patients.png" class="d-inline-block align-top pt-2 pb-2" alt="Patients"> </a>
+                          <a href="#referrals"><img src="images/refer.png" class="d-inline-block align-top pt-2 pb-2" alt="Referrals"> </a>
+                          <a href="#messages"><img src="images/message.png" class="d-inline-block align-top pt-2 pb-2" alt="Messages"> </a>
+                          <a href="#analytics"><img src="images/analytics.png" class="d-inline-block align-top pt-2 pb-2" alt="Analytics"> </a>
+                          
+
+                      </div>
+
+              <!--Top Section--> 
+                      <div class="col-12 col-sm-12 col-md-10 col-lg-11 content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                
+                              <div class="col">
+                                <div class="float-right pr-3 pb-3"><h6 class="d-inline-block">Logged in: </h6> <h5 class="d-inline-block text-primary">Jack Smith</h5></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="ml-3"><a href="#"><img src="images/Dr.png" class="d-inline-block pb-2 pr-2" alt="Physician Profile"></a><select class="form-control2 form-control-lg border-white d-inline-block">
+                                    <option>Donald W Hohman, MD</option>
+                                    <option>Medical 1, MD</option>
+                                    <option>Medical 2, MD</option>
+                                  </select></div>
+                              </div>
+                              <div class="col">
+                                <div>
+                                    <select class="form-control2 form-control-lg border-white d-inline-block">
+                                    <option>Plano Medical Practice</option>
+                                    <option>Medical 1</option>
+                                    <option>Medical 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="float-right pr-3"><a href="#"><img src="images/calendar-settings.png" class="d-inline-block pb-2" alt="Calendar Settings"> </a></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col pt-4">
+                                  <div class="ml-3"><h5 class="d-inline-block font-weight-bold">Clinic Calendar - </h5> <h5 class="d-inline-block text-info font-weight-lighter"> Appointment Request</h5></div>
+                                </div>
+                                <div class="col ml-4">
+                                  <div class="row"><div class="col-3 display-3 font-weight-bold text-info">35</div><div class="col-9 pt-1">
+                                    <div class="text-secondary"><a href="#" class="card-link text-secondary">5 New Patients</a></div>
+                                    <div class="text-secondary"><a href="#" class="card-link text-secondary">10 New Referrals</a></div>
+                                    <div class="text-info border-white"><a href="#" class="card-link text-info"><u>20 Established</u></a></div>
+                                </div></div>
+                                </div>
+                                <div class="col mr-3 pt-3">
+                                  <button class="btn btn-rd-blue float-right">New Appointment</button>
+                                </div>
+                              </div>
+                              <div class="row ml-2 pt-3 pb-1">
+                                <div class="col text-primary d-inline-block pt-1">
+                                    <div>Today <span class="spacer d-inline-block"><div></div></span> <span><a href="#"> &#10094;</a></span> <span class="spacer d-inline-block"><div></div></span> <span class="spacer d-inline-block"><div></div></span> <span class="spacer d-inline-block"><div></div></span> <span><a href="#"> &#10095;</a></span> </div>  
+                                </div>
+                                <div class="col">
+                                    <div class=""><select class="form-control3 border-white d-inline-block">
+                                        <option>March 2020</option>
+                                    </select></div>
+                                </div>
+                                <div class="col">
+                                    <div class=""><select class="form-control3 border-white d-inline-block">
+                                        <option>Month View</option>
+                                        <option>Week View</option>
+                                        <option>Day View</option>
+                                    </select></div>
+                                </div>
+                                <div class="col">
+                                    <div class=""><select class="form-control3 border-white d-inline-block">
+                                        <option>Forward View</option>
+                                        <option>3 Months</option>
+                                        <option>6 Months</option>
+                                        <option>12 Months</option>
+                                    </select></div>
+                                </div>
+                                <div class="col">
+                                    <div class="float-right pr-3"><select class="form-control3 border-white d-inline-block"  name="menu1" id="menu1">
+                                      <option value="/index.html">New Patients</option>
+                                      <option value="/established.html" selected>Established Patients</option>
+                                      <option value="/pending.html">Pending</option>
+                                      <option value="/referrals.html">Referrals</option>
+                                    </select></div>
+                                  </div>
+                              </div>
+                          </div>
+
+
+              <!--Calendar-->
+                          <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 pr-0">
+
+                                  <ul class="weekdays border-top">
+                                    <li>Sun</li>
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                  </ul>
+                                  
+                                  <ul class="days border-top pt-0 pl-0 pb-0">  
+                                    <li>1</li>
+                                    <li><span class="active">2</span></li>
+                                    <li>3</li>
+                                    <li class="bg-info text-white">4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                    <li>7</li>
+                                    
+                                    <li>8</li>
+                                    <li>9</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                    <li>13</li>
+                                    <li>14</li>
+                                    
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    
+                                    <li>22</li>
+                                    <li>23</li>
+                                    <li>24</li>
+                                    <li>25</li>
+                                    <li>26</li>
+                                    <li>27</li>
+                                    <li>28</li>
+                                    
+                                    <li>29</li>
+                                    <li>30</li>
+                                    <li>31</li>
+                                    <li><span class="disable">1</span></li>
+                                    <li><span class="disable">2</span></li>
+                                    <li><span class="disable">3</span></li>
+                                    <li><span class="disable">4</span></li>
+                                  </ul>
+                            </div>
+
+              <!--Table-->
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 pl-0">
+                                <table class="table table-sm table-borderless" id="myTable">
+                                    <thead class="thead bg-light">
+                                      <tr>
+                                        
+                                      </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                      <tr class="bg-info mb-3">
+                                        <td class="font-weight-bold" scope="row"><div class="triangle-topleft-red"></div><a href="#"><img src="images/person2.png" class="" alt="Person"></a></td>
+                                        <td class="float-left">
+                                    
+                                            <div><h5 class="pull-left text-white">Rachel Lewis</h5></div>
+                                            <div><h6 class="pull-left font-weight-lighter text-white">DOB: 02/15/1982</h6></div>
+                                            <div><h6 class="pull-left font-weight-lighter text-white">Ph: 817-321-1234</h6></div>
+                                        </td>
+                                        <td>
+                                            <div><h5 class="pull-left font-weight-lighter text-white">AFTERNOON</h5></div>
+                                            <div><h6 class="pull-left font-weight-lighter text-white">Broken Arm</h6></div>
+                                        </td>
+                                        <td><a href="#"><img src="images/white-document.png" class="d-inline-block" alt="Forms"></a></td>
+                                        <td><a href="#"><img src="images/white-notification.png" class="d-inline-block" alt="Notification"></a></td>
+                                        <td><a href="#"><img src="images/not-confirm.png" class="d-inline-block" alt="Not Confirmed"></a></td>
+                                        <td><a href="#"><img src="images/more-vert-dots.png" class="d-inline-block pr-2" alt="More"></a><div class="request-day text-white font-weight-lighter"><h6>Mar 4, 2020</h6></div></td>
+                                      </tr>
+                                    <tr class="spacer">
+                                      <td></td>
+                                    </tr>
+                                      <tr class="bg-light pt-3">
+                                        <td class="font-weight-bold" scope="row"><div class="triangle-topleft-green"></div><a href="#"><img src="images/person1.png" class="d-inline-block" alt="Person"></a></td>
+                                        <td class="float-left">
+                                            <div><h5 class="pull-left font-weight-bold">David Smith</h5></div>
+                                            <div><h6 class="pull-left text-secondary font-weight-bold">DOB: 02/15/1982</h6></div>
+                                            <div><h6 class="pull-left text-secondary font-weight-bold">Ph: 817-321-1234</h6></div></td>
+                                        <td>
+                                            <div><h5 class="pull-left font-weight-bold">AFTERNOON</h5></div>
+                                            <div><h6 class="pull-left">Broken Arm</h6></div>
+                                        </td>
+                                        <td><a href="#"><img src="images/blue-document.png" class="d-inline-block" alt="Forms"></a></td>
+                                        <td><a href="#"><img src="images/grey-notification.png" class="d-inline-block" alt="Notification"></a></td>
+                                        <td><a href="#"><img src="images/not-confirm.png" class="d-inline-block" alt="Not Confirmed"></a></td>
+                                        <td><a href="#"><img src="images/more-vert-dots.png" class="d-inline-block mt-0" alt="More"></a><div class="request-day"><h6>Mar 9, 2020</h6></div></td>
+                                      </tr>
+                                      <tr class="spacer">
+                                        <td></td>
+                                      </tr>
+                                      <tr class="bg-light">
+                                        <td class="font-weight-bold" scope="row"><div class="triangle-topleft-blue"></div><a href="#"><img src="images/person4.png" class="d-inline-block" alt="Person"></a></td>
+                                        <td class="float-left">
+                                            <div><h5 class="pull-left font-weight-bold">Ashley Miller</h5></div>
+                                            <div><h6 class="pull-left text-secondary font-weight-bold">DOB: 02/15/1982</h6></div>
+                                            <div><h6 class="pull-left text-secondary font-weight-bold">Ph: 817-321-1234</h6></div></td>
+                                        </td>
+                                        <td>
+                                            <div><h5 class="pull-left font-weight-bold">MORNING</h5></div>
+                                            <div><h6 class="pull-left">Broken Arm</h6></div>
+                                        </td>
+                                        
+                                        <td><a href="#"><img src="images/blue-document.png" class="d-inline-block" alt="Forms"></a></td>
+                                        <td><a href="#"><img src="images/grey-notification.png" class="d-inline-block" alt="Notification"></a></td>
+                                        <td><a href="#"><img src="images/not-confirm.png" class="d-inline-block" alt="Not Confirmed"></a></td>
+                                        <td><a href="#"><img src="images/more-vert-dots.png" class="d-inline-block pr-2" alt="More"></a><div class="request-day"><h6>Mar 11, 2020</h6></div></td>
+                                      </tr>
+                                      <tr class="spacer">
+                                        <td></td>
+                                      </tr>
+                                      <tr class="bg-light">
+                                        <td class="font-weight-bold" scope="row"><div class="triangle-topleft-drkblue"></div><a href="#"><img src="images/person3.png" class="d-inline-block" alt="Person"></a></td>
+                                        <td class="float-left">
+                                            <div><h5 class="pull-left font-weight-bold">Gregory Jackson</h5></div>
+                                            <div><h6 class="pull-left text-secondary font-weight-bold">DOB: 02/15/1982</h6></div>
+                                            <div><h6 class="pull-left text-secondary font-weight-bold">Ph: 817-321-1234</h6></div></td>
+                                        </td>
+                                        <td>
+                                            <div><h5 class="pull-left font-weight-bold">MORNING</h5></div>
+                                            <div><h6 class="pull-left">Broken Arm</h6></div>
+                                        </td>
+                                        
+                                        <td><a href="#"><img src="images/blue-document.png" class="d-inline-block" alt="Forms"></a></td>
+                                        <td><a href="#"><img src="images/grey-notification.png" class="d-inline-block" alt="Notification"></a></td>
+                                        <td><a href="#"><img src="images/not-confirm.png" class="d-inline-block" alt="Not Confirmed"></a></td>
+                                        <td><a href="#"><img src="images/more-vert-dots.png" class="d-inline-block pr-2" alt="More"></a><div class="request-day"><h6>Mar 16, 2020</h6></div></td>
+                                      </tr>
+                                      <tr class="spacer">
+                                        <td></td>
+                                      </tr>
+                                      <tr class="bg-light">
+                                        <td class="font-weight-bold" scope="row"><div class="triangle-topleft-grey"></div><a href="#"><img src="images/person7.png" class="d-inline-block" alt="Person"></a></td>
+                                        <td class="float-left">
+                                            <div><h5 class="pull-left font-weight-bold">Joshua Levy</h5></div>
+                                            <div><h6 class="pull-left text-secondary font-weight-bold">DOB: 02/15/1982</h6></div>
+                                            <div><h6 class="pull-left text-secondary font-weight-bold">Ph: 817-321-1234</h6></div></td>
+                                        </td>
+                                        <td>
+                                            <div><h5 class="pull-left font-weight-bold">MORNING</h5></div>
+                                            <div><h6 class="pull-left">Broken Arm</h6></div>
+                                        </td>
+                                        
+                                        <td><a href="#"><img src="images/blue-document.png" class="d-inline-block" alt="Forms"></a></td>
+                                        <td><a href="#"><img src="images/grey-notification.png" class="d-inline-block" alt="Notification"></a></td>
+                                        <td><a href="#"><img src="images/not-confirm.png" class="d-inline-block" alt="Not Confirmed"></a></td>
+                                        <td><a href="#"><img src="images/more-vert-dots.png" class="d-inline-block pr-2" alt="More"></a><div class="request-day"><h6>Mar 16, 2020</h6></div></td>
+                                      </tr>
+                                    </tbody>
+                                  </table> 
+                            </div>
+                          </div>
+                        
+                      </div>
+                    </div>  
+
+                  </main>
+
+                <!--Footer-->
+                  
+                  <footer class="footer fixed-bottom bg-white">
+                      <div class="container-fluid">
+                        <div class="row">
+                            
+                        </div>
+
+                      </div>
+                  </footer>
+
+                  <script type="text/javascript">
+                    var urlmenu = document.getElementById( 'menu1' );
+                    urlmenu.onchange = function() {
+                         window.open( this.options[ this.selectedIndex ].value,'_self' );
+                    };
+                   </script>
+
+                  <script>
+                      document.getElementById('my_selection').onchange = function() {
+                      window.location.href = this.children[this.selectedIndex].getAttribute('href');
+                      }
+                  </script>
+              
+        <script src="/scripts/jquery.min.js"></script>
+        <script src="/scripts/popper.min.js"></script>
+        <script src="/scripts/custom.js"></script>
+        <script src="/scripts/bootstrap.min.js"></script>
+
+        <ion-icon src="/path/to/external/file.svg"></ion-icon>
+    </body>
+</html>
